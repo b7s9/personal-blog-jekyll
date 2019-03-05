@@ -6,7 +6,7 @@ title: Categories
 
 <ul>
     {% for category in site.categories %}
-        <h2>{{category[0] | capitalize }}</h2>
+        <h2 id="{{category[0] | lowercase}}">{{category[0] | capitalize }}</h2>
 
             {% for post in category[1] %}
                 <li>

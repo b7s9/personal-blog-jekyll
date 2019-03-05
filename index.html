@@ -1,5 +1,24 @@
 ---
-title: Home
+title: Index
 layout: default
 ---
-<h1>Here we go!!!</h1>
+<h1>Index</h1>
+
+<section class="last-post">
+    {%- assign last_post = site.posts[0] -%}
+    <h2>Most Recent Post</h2>
+    <h3><a href="{{last_post.url}}">{{last_post.title}}</a></h3>
+    <p>{{last_post.excerpt}}</p>
+</section>
+
+<section class="browse-categories">
+    <h2>Browse Categories</h2>
+    <ul>
+        {% for category in site.categories %}
+            <li><a href="">{{category[0] | capitalize }}</a></li>
+        {% endfor %}
+    </ul>
+    
+</section>
+    
+    

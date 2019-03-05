@@ -9,6 +9,7 @@ title: Posts
         <li>
             <h3><a href="{{post.url}}">{{post.title}}</a></h3>
             <p>{{post.excerpt}}</p>
+            {% include read-more-btn.html link=post.url %}     
         </li>
     {% endfor %}
 </ul>
