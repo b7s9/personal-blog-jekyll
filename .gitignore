@@ -1,0 +1,16 @@
+#config
+.DS_Store
+package-lock.json
+.vscode/
+.sass-cache/
+
+#prod
+_site/
+
+#content
+assets/img
+_posts/
+*.jpg
+*.png
+*.svg
+*.woff
