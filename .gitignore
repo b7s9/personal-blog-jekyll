@@ -8,8 +8,9 @@ package-lock.json
 _site/
 
 #content
-assets/img
+assets/img/
 _posts/
+assets/fonts/
 *.jpg
 *.png
 *.svg

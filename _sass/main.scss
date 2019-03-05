@@ -1,3 +1,46 @@
+@import 'fonts';
+
+html{
+    font-size: 1rem;
+    font-family: "Source Sans Pro", Helvetica, Arial sans-serif;
+    
+}
+
+h1{
+    font-family: "Junicode", "Palatino", serif;
+    line-height: 2rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+h2{
+    font-family: "Junicode", "Palatino", serif;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+h3{
+    font-family: "Source Sans Pro", Helvetica, Arial sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+section.intro p{
+    font-family: "Junicode", "Palatino", serif;
+    font-size: 1.125rem;    
+    line-height: 2rem;
+}
+
+p{
+    font-family: "Source Sans Pro", Helvetica, Arial sans-serif;
+    line-height: 1.4rem;
+}
+
+pre code{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .current-page {
     color: rgb(56, 56, 56);
 }
