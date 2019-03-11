@@ -1,15 +1,26 @@
 ---
-title: Index
 layout: default
+title: Posts
 ---
-<h1>Index</h1>
+<h1>Posts</h1>
 
 <section class="last-post">
     {%- assign last_post = site.posts[0] -%}
     <h2>Most Recent Post</h2>
     <h3><a href="{{last_post.url}}">{{last_post.title}}</a></h3>
-    <p>{{last_post.excerpt}}</p>
+    <div class="excerpt" title="{{last_post.title}}">{{last_post.excerpt}}</div>
 </section>
+
+<ul>
+    <h2>All Posts</h2>
+    {% for post in site.posts %}
+        <li>
+            <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+            <div class="excerpt" title="{{post.title}}">{{post.excerpt}}</div>
+            {% include read-more-btn.html link=post.url %}     
+        </li>
+    {% endfor %}
+</ul>
 
 <section class="browse-categories">
     <h2>Browse Categories</h2>

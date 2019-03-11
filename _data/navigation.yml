@@ -1,9 +1,7 @@
-- name: Home
+- name: Posts
   link: /
 - name: About Me
   link: /about
-- name: Posts
-  link: /posts
 - name: Tags
   link: /tags
 - name: Categories
