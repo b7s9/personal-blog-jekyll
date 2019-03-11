@@ -19,12 +19,12 @@
     <div id="alert" aria-live="assertive" hidden>
         <span class="label">This is an example of a snackbar</span>
     </div>
-    <div id="snackbar" class="accessibility-feedback visually-hidden" aria-live="polite">
+    <div id="snackbar" class="accessibility-feedback visually-hidden" aria-live="polite" aria-label="Feedback">
         <span class="label">This is an example of a snackbar</span>
         <!-- <span class="cta"></span> -->
     </div>
     {% include navigation.html %}
-    <main id="main">
+    <main id="main" aria-label="Main content">
         {{ content }}
     </main>
 

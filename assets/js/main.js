@@ -25,7 +25,7 @@
     // }
     
     const formatShareBtn = ()=>{
-        const shareBtnContainer = document.querySelector('div.share-post');
+        const shareBtnContainer = document.querySelector('div.share-post'); //use querySelectorAll to have multiple share btns
         const shareBtn = shareBtnContainer.children[2];
         
         const copyPostLink = ()=>{
@@ -50,5 +50,10 @@
     }
 
     document.querySelector('div.share-post') && formatShareBtn();
+
+    const sections = document.querySelectorAll('section');
+    for(const section of sections){
+        section.setAttribute('aria-label', section.children[0].textContent);
+    }
     
 }

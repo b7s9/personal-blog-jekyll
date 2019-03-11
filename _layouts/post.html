@@ -3,7 +3,7 @@ layout: default
 ---
 <h1>{{ page.title }}</h1>
 <h4 class="date">{{ page.date | date_to_long_string: "ordinal" }}</h4>
-<ul class="tags">
+<ul class="tags" aria-label="Post tags">
     {% for tag in page.tags %}
         <li><a href="/tags.html#{{tag}}">{{tag | capitalize }}</a></li>
     {% endfor %}
