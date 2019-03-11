@@ -1,8 +1,40 @@
 @import 'fonts';
+@import 'colors';
+
+// --------------------------------------------------------
+// Layout
+// --------------------------------------------------------
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    opacity: 0;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); // IE6, IE7
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+#snackbar {
+    bottom: 1rem;
+    left: 1rem;
+    opacity: 1;
+    padding: 1rem;
+    position: fixed;
+    transition: opacity 280ms;
+    z-index: 20;
+}
+
+// --------------------------------------------------------
+// Type setting
+// --------------------------------------------------------
 
 html{
     font-size: 1rem;
     font-family: "Source Sans Pro", Helvetica, Arial sans-serif;    
+}
+
+nav .current-page {
+    text-decoration: none;
 }
 
 h1{
@@ -25,6 +57,14 @@ h3{
     line-height: 1.8rem;
 }
 
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 section.intro p{
     font-family: "Junicode", "Palatino", serif;
     font-size: 1.125rem;    
@@ -36,37 +76,64 @@ p{
     line-height: 1.4rem;
 }
 
-p.excerpt {
+a.excerpt, a.excerpt + .cta {
     font-family: "Source Sans Pro", Helvetica, Arial sans-serif;
+    font-size: 1rem;
     line-height: 1.4rem;
+    text-decoration: none;
+}
+
+.posts {
+    h3 a, a.cta {
+        text-decoration: underline;
+    }
+    h3 a:hover, a.cta:hover {
+        text-decoration: none;
+    }
 }
 
 pre code{
     font-family: 'Courier New', Courier, monospace;
 }
 
-.current-page {
-    color: rgb(56, 56, 56);
+// --------------------------------------------------------
+// Color
+// --------------------------------------------------------
+
+html {
+    background-color: $white;
+    color: $dark-grey;
 }
 
-.visually-hidden {
-    position: absolute !important;
-    height: 1px; width: 1px;
-    opacity: 0;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px); // IE6, IE7
-    clip: rect(1px, 1px, 1px, 1px);
+nav .current-page {
+    color: $secondary-dark;
+}
+
+a {
+    color: $primary-dark;
+}
+
+a:hover {
+    color: $primary-dark-2;
+}
+
+.posts {
+    h3 a:hover, a.cta:hover {
+        color: $primary-dark-2;
+    }
+}
+
+a.excerpt {
+    color: $dark-grey;
+}
+
+a.excerpt:hover {
+    color: $shadow-grey;
 }
 
 #snackbar {
-    background-color: #000;
-    bottom: 1rem;
-    box-shadow: #333 1px 1px 5px; 
-    color: #fff;
-    left: 1rem;
-    opacity: 1;
-    padding: 1rem;
-    position: fixed;
-    transition: opacity 280ms;
-    z-index: 20;
+    background-color: $secondary-dark;
+    box-shadow: $shadow-grey 1px 1px 5px;
+    color: $white;
+
 }
