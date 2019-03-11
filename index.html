@@ -8,7 +8,7 @@ title: Posts
     {%- assign last_post = site.posts[0] -%}
     <h2>Most Recent Post</h2>
     <h3><a href="{{last_post.url}}">{{last_post.title}}</a></h3>
-    <div class="excerpt" title="{{last_post.title}}">{{last_post.excerpt}}</div>
+    <a href="{{last_post.url}}" class="excerpt" title="{{last_post.title}}">{{last_post.excerpt}}</a>
 </section>
 
 <ul>
@@ -16,7 +16,7 @@ title: Posts
     {% for post in site.posts %}
         <li>
             <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-            <div class="excerpt" title="{{post.title}}">{{post.excerpt}}</div>
+            <a href="{{post.url}}" class="excerpt" title="{{post.title}}">{{post.excerpt}}</a>
             {% include read-more-btn.html link=post.url %}     
         </li>
     {% endfor %}
