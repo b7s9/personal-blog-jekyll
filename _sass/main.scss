@@ -44,6 +44,14 @@ button {
     padding: 1rem;
 }
 
+div.share-post {
+    text-align: center;
+
+    @media screen and (min-width:60rem) {
+        text-align: left;
+    }
+}
+
 // --------------------------------------------------------
 // Type setting
 // --------------------------------------------------------
@@ -95,6 +103,7 @@ p{
     font-family: "Source Sans Pro", Helvetica, Arial sans-serif;
     font-size: 1.2rem;
     line-height: 1.8;
+    overflow-wrap: break-word;
 }
 
 a.excerpt, a.excerpt + .cta {
@@ -119,6 +128,11 @@ pre code{
 
 button {
     font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 // --------------------------------------------------------
