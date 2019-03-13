@@ -9,7 +9,6 @@ _site/
 
 #content
 assets/img/
-_posts/
 assets/fonts/
 *.jpg
 *.png

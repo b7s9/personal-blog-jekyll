@@ -1,0 +1,145 @@
+---
+layout: post
+title: Digital Blue Light
+categories: [design]
+tags: [blue light, color theory]
+---
+<section class="intro">
+    <h3 class="visually-hidden">Introduction</h3>
+    <p>Cello may have been the first publicly released browser to default to dark text on a light but warmer yellow
+        background. I could not find any reading on this (or the browser in general), especially since the browser was
+        poorly made/maintained, and not in use for very long. However, the mere mention of this in class, ignited my
+        curiosity in how we’ve grown to understand the effects of screen color warmth, what’s been done in response, and
+        what could be on the horizon. Hopefully, throughout this essay I can make concepts from existing vision science
+        literature more accessible.</p> <!--more-->
+
+    <p>Disclaimer, staring at the sun or a clear blue sky is far worse for your retinas than looking at screens at
+        night, however, using blue light screens at night will be worse for your sleep schedule and quality.</p>
+</section>
+
+<section class="body">
+    <h3>Definitions</h3>
+    <p>
+        <strong>Color warmth</strong> (on a color wheel) is what we tend to think of as warmth from a design perspective.
+        In fig. 1. (https://www.mgxcopy.com/mindshare/wp-content/uploads/2015/05/2000px-BYR_color_wheel.svg_.png), colors
+        to the left of center are cold, while colors to the right are warm. This design knowledge will be unintuitive in
+        the context of this essay, so put this concept aside for now.
+    </p>
+
+    <p>
+        <strong>Color temperature</strong> (measured in Kelvin) is the measurement of how intense/hot a light source is.
+        For instance, the sun/a clear blue sky is the most powerful light source we can measure, clocking in around 15-27
+        thousand Kelvin, whereas candle light, which is one of the coolest light sources we can measure, clocks in at a
+        much lower 1.7 thousand Kelvin see fig. 2.
+        (https://en.wikipedia.org/wiki/Color_temperature#Categorizing_different_lighting). This definition is what I will
+        be referring to throughout this essay.
+    </p>
+
+    <p>
+        A person’s <strong>Circadian Rhythm</strong> is essentially their internal clock, which dictates when the body
+        should be awake or asleep. This cycle tends to line up with 24 hour day cycles. Staying up very late would be one
+        example of interfering with/delaying this cycle. This process is regulated by the body’s production of melatonin. I
+        will explore this further.
+    </p>
+</section>
+
+<section class="body">
+    <h3>Blue light can be harmful to human health.</h3>
+    <p>
+        This discovery is only about twenty years old, but since then vision science literature has exploded with research
+        on the topic – adding further confirmations to the original concept, further expanding on a variety health
+        detriments ranging from obesity to cancer, and comparing different lighting or temporal scenarios. But don’t
+        believe me, the creators of f.lux have curated a list of over 50 articles (up until 2016) pertaining to just about
+        every angle of the topic (f.lux, 2016).
+    </p>
+
+    <p>
+        In fig. 3, a light frequency spectrum from fluxometer shows us a breakdown of a high intensity light – what humans
+        would perceive as pure white daylight. Notice the subtle grey bell curve around 480nm near the blue area on the
+        left of the graph. All light within this bell curve is known colloquially as “blue light”, due to its midpoint
+        situated comfortably within the blue frequencies. Note how it actually includes some violet and many of the green
+        frequencies as well. This band of light can be harmful because it interferes with the body’s circadian rhythm,
+        especially when perceived during non-daylight hours (Morita et al., 1996).
+    </p>
+
+    <p>
+        Our eyes have photoreceptors called ipRGC’s which specifically target this band of blue light. These ipRGC’s are
+        home to the melanopsin photopigment, which is a key mediator in the body’s melatonin production. When we view light
+        frequencies within the blue light band, melanopsin will suppress melatonin production, effectually delaying the
+        body’s circadian rhythm. Existing literature commonly refers to this result as a circadian phase shift. In layman’s
+        terms, if you look at a bright light very late in the evening, your body might want to go to bed an hour later and
+        wake up an hour later, shifting your whole sleep schedule back an hour (Berson et al., 2002).
+    </p>
+
+    <p>What’s so bad about this?</p>
+
+    <p>One of the most often cited papers in this field reports that using light emitting screens (they studied
+        e-readers specifically) before bedtime resulted in people taking longer to fall asleep and experiencing less REM
+        sleep (they had poorer quality sleep), leading to the aforementioned circadian phase shift, which caused more
+        drowsiness the following morning and longer to fully “wake up” (Chang et al., 2015). A later study, abstracted this
+        idea by subjecting people to intermittent bright pulses of light, and had similar findings in terms of effects on
+        sleep and alertness (Gronfier et al., 2004).</p>
+</section>
+
+<section class="body">
+    <h3>F.lux saves the day.</h3>
+    <p>
+        In 2009 a computer software application called f.lux was created to reduce the negative effects of using screens at
+        night. f.lux mimics the cycle of a 24 hour day, using location based sunrise/sunset times to match the color
+        temperature of a screen, to that of the ambient color temperature outside. LCD/computer screens tend to be 50-60%
+        as bright as daylight, but to our eyes, this is a close approximation, which is still very hot. The program uses a
+        blue light filter to reduce the amount of blue light, to achieve the proper color temperature. Very late at night
+        (while we should be asleep!) f.lux will lower the color temperature to roughly 2% of natural daylight. This results
+        in a reduced impact on our eyes and sleep patterns, than traditional screen usage at night (fluxometer, 2016)
+        (f.lux, 2016).
+    </p>
+
+    <p>The biggest problem with this will be obvious to anyone who already uses f.lux or similar software (such as Apple
+        Night Shift – which is awful in comparison): reducing the color temperature of our screens has a very destructive
+        effect on the output color frequency spectrum. Once the blues (and greens) are gone, everything looks orange. It is
+        difficult to use interfaces which rely on color luminance – especially for contrast, and images just look bad.
+        However, there could be an applicable solution coming soon.</p>
+</section>
+
+<section class="body">
+    <h3>Experimental research claims it’s possible to preserve color gamut while reducing harmful blue light.</h3>
+    <p>A 2016 study began with this problem and claimed to have found a solution which is the best of both worlds:
+        screen color temperature which is not harmful to the eye and completely orange. Rather than simply compressing the
+        blue light frequencies as f.lux does, this study was able to convincingly reconstruct images on a computer screen
+        through spectral re-synthesis using colors as far outside of the melanopic blue light band as possible.</p>
+
+    <p>Their testing used a proof-of-concept Matlab program to convert 2mb images at about 20 frames per second,
+        however, if this technology passes further testing and undergoes significant optimization, it is within reason that
+        in the next few years this could be incorporated into to f.lux or a new software to replace it (Shih et al., 2016).</p>
+</section>
+
+<section class="conclusion">
+    <h3>Conclusion</h3>
+    <p>
+        Use a blue light blocker, if you're planning to work late. Please don't use Apple Night Shift.
+    </p>
+</section>
+
+<!-- {% include share-btn.html %} -->
+
+<section class="references">
+    <h3>References</h3>
+    <ul>
+        <li><a href="#">Berson, D. M., Dunn, F. A., & Takao, M. (2002). Phototransduction by retinal ganglion cells that
+                set the circadian clock. Science, 295(5557), 1070-1073. doi:10.1126/science.1067262</a></li>
+        <li><a href="#">Chang, A.-M., Aeschbach, D., Duffy, J. F., & Czeisler, C. A. (2015). Evening use of light-emitting
+                eReaders negatively affects sleep, circadian timing, and next-morning alertness. Proceedings of the National
+                Academy of Sciences, 112(4), 1232–1237. https://doi.org/10.1073/pnas.1418490112</a></li>
+        <li><a href="#">f.lux. (2009-2016). Research. Retrieved February 2, 2019, from http://justgetflux.com/research.html</a></li>
+        <li><a href="#">Gronfier, C., Kenneth P. Wright, J., Kronauer, R. E., Jewett, M. E., & Czeisler, C. A. (2004).
+                Efficacy of a single sequence of intermittent bright light pulses for delaying circadian phase in humans.
+                American Journal of Physiology - Endocrinology And Metabolism, 287(1), 174–181.
+                https://doi.org/10.1152/ajpendo.00385.2003</a></li>
+        <li><a href="#">Morita, T., & Tokura, H. (1996). Effects of Lights of Different Color Temperature on the Nocturnal
+                Changes in Core Temperature and Melatonin in Humans. Applied Human Science, 15(5), 243–246.
+                https://doi.org/10.2114/jpa.15.243</a></li>
+        <li><a href="#">Shih, K.-T., Liu, J.-S., Shyu, F., Yeh, S.-L., & Chen, H. H. (2016). Blocking Harmful Blue Light
+                While Preserving Image Color Appearance. ACM Trans. Graph., 35(6), 175:1–175:10.
+                https://doi.org/10.1145/2980179.2982418</a></li>
+    </ul>
+</section>
