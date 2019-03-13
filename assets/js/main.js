@@ -1,7 +1,7 @@
 {
     const snackbar = document.getElementById('snackbar');
     const snackbarLabel = snackbar.children[0];
-    ''.length == 0 && console.log()
+
     /**
      * 
      * @param {html element} container where to put the feedback msg
@@ -43,11 +43,17 @@
             
             window.setTimeout(()=>{ //clear feedbackMsg after 5s
                 setFeedbackMsg(snackbarLabel);
-            }, 4000)
-        }
+            }, 4000);
+        };
         
-        shareBtn.addEventListener('click', copyPostLink);
-    }
+        // shareBtn.addEventListener('click', copyPostLink);
+        shareBtn.addEventListener('touchup', copyPostLink);
+        shareBtn.addEventListener('mouseup', copyPostLink);
+    };
+
+    // ------------------------------
+    // ------------------------------
+    // ------------------------------
 
     document.querySelector('div.share-post') && formatShareBtn();
 

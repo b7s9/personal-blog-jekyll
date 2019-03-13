@@ -3,14 +3,16 @@
 package-lock.json
 .vscode/
 .sass-cache/
+node_modules
 
 #prod
 _site/
 
 #content
-assets/img/
+assets/imgs/
 assets/fonts/
 *.jpg
 *.png
 *.svg
 *.woff
+
