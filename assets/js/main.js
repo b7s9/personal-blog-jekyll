@@ -17,7 +17,7 @@
         }
         container.textContent = str;
         return str;
-    }
+    };
     
     // const setAlertMsg = (container, str = '', priority = '0')=>{ //set feedbackMsg
     //     container.textContent = str;
@@ -61,5 +61,9 @@
     for(const section of sections){
         section.setAttribute('aria-label', section.children[0].textContent);
     }
+
+    // ------------------------------
+    // ------------------------------
+    // ------------------------------
     
 }
