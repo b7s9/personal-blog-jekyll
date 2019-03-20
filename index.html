@@ -15,10 +15,11 @@ title: Posts
     <!-- <h2>All Posts</h2> -->
     <ul>
         {% for post in site.posts %}
-            <li>
+            <li class="post-preview">
                 <h3><a href="{{post.url}}">{{post.title}}</a></h3>
                 <a href="{{post.url}}" class="excerpt" title="{{post.title}}">{{post.excerpt}}</a>
-                {% include read-more-btn.html link=post.url %}     
+                {% include read-more-btn.html link=post.url %} 
+                <hr>    
             </li>
         {% endfor %}
     </ul>

@@ -3,7 +3,7 @@ layout: default
 title: Tags
 ---
 <h1>Tags</h1>
-<ul>
+<ul class="tags">
    {% for tag in site.tags %}
         <li>
             <a href="#{{tag[0]}}">{{tag[0] | capitalize }}</a>
@@ -16,9 +16,11 @@ title: Tags
         <h2 id="{{tag[0]}}">{{tag[0] | capitalize }}</h2>
 
             {% for post in tag[1] %}
-            <li>
+            <li class="post-preview">
                 <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-                <div class="excerpt" title="{{post.title}}">{{post.excerpt}}</div>
+                <a href="{{post.url}}" class="excerpt" title="{{post.title}}">{{post.excerpt}}</a>
+                {% include read-more-btn.html link=post.url %}
+                <hr>
             </li>
             {% endfor %}
     {% endfor %}

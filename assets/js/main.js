@@ -47,7 +47,7 @@
         };
         
         // shareBtn.addEventListener('click', copyPostLink);
-        shareBtn.addEventListener('touchup', copyPostLink);
+        shareBtn.addEventListener('touchend', copyPostLink);
         shareBtn.addEventListener('mouseup', copyPostLink);
     };
 
