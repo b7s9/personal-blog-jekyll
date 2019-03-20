@@ -288,6 +288,15 @@ nav {
 
 } 
 
+h2 {
+    background-image: linear-gradient(180deg, $primary-light, rgba(0, 0, 0, 0));
+    clip-path: circle(60%);
+
+    @media screen and (min-width: $mobile-max){
+        clip-path: circle(40%);
+    }
+}
+
 h4 {
     color:$shadow-grey;
 }
