@@ -5,14 +5,17 @@ package-lock.json
 .sass-cache/
 node_modules
 
-#prod
-_site/
-
-#content
+#binaries
 assets/imgs/
 assets/fonts/
+_fonts/
 *.jpg
 *.png
 *.svg
 *.woff
+*.ttf
 
+#prod
+_site/
+assets/js/
+*.min.js
