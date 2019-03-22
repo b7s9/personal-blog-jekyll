@@ -1,6 +1,8 @@
 #!/bin/bash
 # Dev
 
+pwd | pbcopy
+
 open -a "Visual Studio Code" .
 open .
 
