@@ -17,7 +17,7 @@ title: Posts
         {% for post in site.posts %}
             <li class="post-preview">
                 <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-                <a href="{{post.url}}" class="excerpt" title="{{post.title}}">{{post.excerpt}}</a>
+                <a href="{{site.url}}{{post.url}}" class="excerpt" title="{{post.title}}">{{post.excerpt}}</a>
                 {% include read-more-btn.html link=post.url %} 
                 <hr>    
             </li>
@@ -29,7 +29,7 @@ title: Posts
     <h2>Browse Categories</h2>
     <ul>
         {% for category in site.categories %}
-            <li><a href="/categories.html#{{category[0]}}">{{category[0] | capitalize }}</a></li>
+            <li><a href="{{site.url}}categories.html#{{category[0]}}">{{category[0] | capitalize }}</a></li>
         {% endfor %}
     </ul>
     

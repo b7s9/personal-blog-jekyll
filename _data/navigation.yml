@@ -1,8 +1,8 @@
 - name: Posts
-  link: /
+  link: /blog/
 - name: About Me
-  link: /about.html
+  link: /blog/about.html
 - name: Tags
-  link: /tags.html
+  link: /blog/tags.html
 - name: Categories
-  link: /categories.html
+  link: /blog/categories.html

@@ -18,8 +18,8 @@ title: Categories
 
             {% for post in category[1] %}
                 <li class="post-preview">
-                    <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-                    <a href="{{post.url}}" class="excerpt" title="{{post.title}}">{{post.excerpt}}</a>
+                    <h3><a href="{{site.url}}{{post.url}}">{{post.title}}</a></h3>
+                    <a href="{{site.url}}{{post.url}}" class="excerpt" title="{{post.title}}">{{post.excerpt}}</a>
                     {% include read-more-btn.html link=post.url %}
                     <hr>
                 </li>                
